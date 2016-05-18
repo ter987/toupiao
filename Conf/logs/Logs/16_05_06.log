@@ -1,0 +1,592 @@
+[ 2016-05-06T16:03:21+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '') D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\Home\IndexAction.class.php 第 2 行.
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.020001s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.039002s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.039002s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.040002s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.040002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.041002s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T16:03:22+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:03:22+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:03:23+08:00 ] ERR: (ThinkException) 无法加载模块:favicon.ico
+[ 2016-05-06T16:03:23+08:00 ] ERR: (ThinkException) 无法加载模块:favicon.ico
+[ 2016-05-06T16:03:26+08:00 ] 127.0.0.1 /index.php?m=Users&a=checklogin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.004000s ]
+SQL: SELECT `token` FROM `tp_token_open` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `tp_users` SET `lasttime`=1462521806,`lastloginmonth`=5,`lastip`='127.0.0.1' WHERE ( `id` = 1 ) [ RunTime:0.001000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.045003s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.078005s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.078005s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.078005s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.079005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.079005s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:03:27+08:00 ] 127.0.0.1 /index.php?g=User&m=Vote&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.008000s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.005001s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `gid`,`activitynum` FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_vote` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_vote` WHERE ( `token` = 'vjcbgt1414375209' ) ORDER BY id DESC  [ RunTime:0.001000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 14 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_vote` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.054003s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 5 行.
+NOTIC: [8] Undefined variable: ok D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 165 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 181 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.067004s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.068004s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.068004s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.069004s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.069004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:03:27+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:03:27+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:03:34+08:00 ] 127.0.0.1 /index.php?g=User&m=Vote&a=add&type=img
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.011001s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.007000s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.005000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.070004s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 5 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 166 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 171 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 175 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 178 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 182 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 186 行.
+NOTIC: [8] Undefined variable: reslist D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 192 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 193 行.
+NOTIC: [8] Undefined variable: reslist D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 199 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 200 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 206 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 209 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 215 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 220 行.
+NOTIC: [8] Undefined variable: guanggao D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 223 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 237 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 250 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 382 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 383 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 393 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 397 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 400 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 402 行.
+NOTIC: [8] Undefined variable: vo D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\06910c565e1450d396eed27237367a2f.php 第 407 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.071004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.087004s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.088005s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.088005s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.089005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.090005s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T16:03:35+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:03:48+08:00 ] 127.0.0.1 /index.php?g=User&m=Upyun&a=upload&token=vjcbgt1414375209&width=700
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.010001s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.010000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.005000s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.008000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.113007s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: apikey D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\98b8848b68e15d866cd61a62155341bf.php 第 11 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.114007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.174010s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.176010s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.177010s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.177010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.177010s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:04:07+08:00 ] 127.0.0.1 /index.php?g=User&m=Upyun&a=upload&token=vjcbgt1414375209&width=700
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.008000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.005001s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.006000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] md5_file(./uploads/v/vjcbgt1414375209/c/f/3/8/572c4ff7b008b.png): failed to open stream: No such file or directory D:\xampp\htdocs\wxtpxt\zcharm\Lib\ORG\UploadFile.class.php 第 197 行.
+SQL: UPDATE `tp_users` SET `attachmentsize`=attachmentsize+37678 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_files` [ RunTime:0.005001s ]
+SQL: INSERT INTO `tp_files` (`token`,`size`,`time`,`type`,`url`) VALUES ('vjcbgt1414375209',37678,1462521847,'png','http://wt.3322.org/uploads/v/vjcbgt1414375209/c/f/3/8/thumb_572c4ff7b008b.png') [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:04:08+08:00 ] 127.0.0.1 /index.php?g=User&m=Upyun&a=upload&error=0&msg=http://wt.3322.org/uploads/v/vjcbgt1414375209/c/f/3/8/thumb_572c4ff7b008b.png
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.011001s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.005000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.050002s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: apikey D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\98b8848b68e15d866cd61a62155341bf.php 第 11 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.057003s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.058003s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.058003s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.058003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.059003s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:04:23+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:04:42+08:00 ] 127.0.0.1 /index.php?g=User&m=Vote&a=add&type=img
+NOTIC: [2] htmlspecialchars() expects parameter 1 to be string, array given D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\App.class.php 第 64 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.004001s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.003000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: add D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 140 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 146 行.
+SQL: SHOW COLUMNS FROM `tp_vote` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `tp_vote_item` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `tp_guanggao` [ RunTime:0.004000s ]
+SQL: INSERT INTO `tp_vote` (`keyword`,`title`,`qtxinxi`,`picurl`,`wappicurl`,`showpic`,`info`,`jiangpin`,`cknums`,`votelimit`,`statdate`,`enddate`,`zdyname`,`token`,`type`,`status`) VALUES ('投票ssss','asdfa sd fasd fa','sdfasdf asd asdf&amp;lt;br /&amp;gt;','','http://wt.3322.org/uploads/v/vjcbgt1414375209/c/f/3/8/thumb_572c4ff7b008b.png',1,'asdfa sdfa sd a&amp;lt;br /&amp;gt;','asdfasdf',1,1,1462521840,1464336240,'','vjcbgt1414375209','img',1) [ RunTime:0.019001s ]
+NOTIC: [8] Undefined variable: item_add D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 191 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 191 行.
+NOTIC: [8] Undefined variable: guanggao_add D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 210 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 210 行.
+SQL: SHOW COLUMNS FROM `tp_keyword` [ RunTime:0.004000s ]
+SQL: INSERT INTO `tp_keyword` (`pid`,`module`,`token`,`keyword`) VALUES (18,'Vote','vjcbgt1414375209','投票ssss') [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.155009s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.156009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.162009s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.163009s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.163009s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.164009s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.164009s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:04:43+08:00 ] 127.0.0.1 /index.php?g=User&m=Vote&a=index&token=vjcbgt1414375209
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.005000s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.003001s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `gid`,`activitynum` FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_vote` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_vote` WHERE ( `token` = 'vjcbgt1414375209' ) ORDER BY id DESC  [ RunTime:0.001000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_vote` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.048003s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 5 行.
+NOTIC: [8] Undefined variable: ok D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 165 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 181 行.
+NOTIC: [8] Undefined variable: myurl D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 217 行.
+NOTIC: [8] Undefined variable: myurl D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 218 行.
+NOTIC: [8] Undefined variable: myurl D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 219 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.060004s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.061004s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.061004s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.061004s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.062004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T16:04:43+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:04:43+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:04:53+08:00 ] 127.0.0.1 /index.php?g=User&m=Vote&a=totals&type=img&id=18
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.006001s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.004000s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.004000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_vote` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `tp_vote_record` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `tp_vote` WHERE ( `id` = 18 ) AND ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_vote_item` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_vote_item` WHERE ( `vid` = 18 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_vote_item` WHERE ( `vid` = 18 ) AND ( `status` = 1 ) ORDER BY vcount DESC LIMIT 0,60   [ RunTime:0.000000s ]
+SQL: SELECT SUM(vcount) AS tp_sum FROM `tp_vote_item` WHERE ( `vid` = 18 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `vcount` FROM `tp_vote_item` WHERE ( `vid` = 18 ) AND ( `status` = 1 ) GROUP BY vcount  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 68 行.
+NOTIC: [8] Undefined variable: rank_countno D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 71 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 71 行.
+SQL: SELECT * FROM `tp_vote_item` WHERE ( `vid` = 18 ) AND ( `status` = 1 ) ORDER BY vcount desc LIMIT 0,60   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 74 行.
+NOTIC: [8] Undefined variable: total D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 83 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.070004s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\beff6b35616fb6e07af2f86038cf58fd.php 第 5 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.071004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.081005s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.082005s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.082005s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.083005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.083005s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:04:57+08:00 ] 127.0.0.1 /index.php?g=User&m=Bm&a=wap&token=vjcbgt1414375209&tid=18
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_vote` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `tp_vote` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `id` = 18 ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.032002s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: myurl D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\a8dca2e681e60e0da4a370355aa1aaf1.php 第 128 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.057003s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.057003s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.058003s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.058003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.059003s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-06T16:06:20+08:00 ] 127.0.0.1 /index.php?g=User&m=Vote&a=eitem&token=vjcbgt1414375209&id=18
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.005001s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.005000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_vote_item` [ RunTime:0.005000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_vote_item` WHERE ( `vid` = 18 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_vote_item` WHERE ( `vid` = 18 ) AND ( `status` = 1 ) ORDER BY id DESC LIMIT 0,60   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vote D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\VoteAction.class.php 第 824 行.
+SQL: SELECT SUM(vcount) AS tp_sum FROM `tp_vote_item` WHERE ( `vid` = null ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.056003s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\81da8b6e05eaad148eb0c454090d4123.php 第 5 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.066004s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.066004s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.067004s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.067004s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.068004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T16:08:26+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '') D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\Home\IndexAction.class.php 第 2 行.
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.030002s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.040002s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.040002s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.041002s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.041002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.042002s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-06T16:08:26+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:26+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:29+08:00 ] 127.0.0.1 /index.php?m=Users&a=checklogin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.005001s ]
+SQL: SELECT `token` FROM `tp_token_open` WHERE ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `tp_users` SET `lasttime`=1462522109,`lastloginmonth`=5,`lastip`='127.0.0.1' WHERE ( `id` = 1 ) [ RunTime:0.001000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.048003s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.054003s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.054003s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.055003s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.055003s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.056003s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T16:08:31+08:00 ] 127.0.0.1 /index.php?g=User&m=Vote&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.006001s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.005000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `gid`,`activitynum` FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_vote` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_vote` WHERE ( `token` = 'vjcbgt1414375209' ) ORDER BY id DESC  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tp_vote` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.056003s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 5 行.
+NOTIC: [8] Undefined variable: ok D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 165 行.
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 181 行.
+NOTIC: [8] Undefined variable: myurl D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 217 行.
+NOTIC: [8] Undefined variable: myurl D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 218 行.
+NOTIC: [8] Undefined variable: myurl D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\f70321ef24e437eb7147c67ab8f0460a.php 第 219 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.068004s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.069004s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.070004s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.070004s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.071004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T16:08:31+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:31+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:39+08:00 ] 127.0.0.1 /index.php?g=User&m=Areply&a=index&token=vjcbgt1414375209
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of AreplyAction::insert() should be compatible with BaseAction::insert($name = '', $back = '/index') D:\xampp\htdocs\wxtpxt\zcharm\Lib\Action\User\AreplyAction.class.php 第 5 行.
+NOTIC: [2] Cannot use a scalar value as an array D:\xampp\htdocs\wxtpxt\zcharm\_Core\Lib\Core\Action.class.php 第 208 行.
+SQL: SHOW COLUMNS FROM `tp_agent` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `tp_agent` WHERE ( `siteurl` = 'http://wt.3322.org' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_user_group` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `tp_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_users` [ RunTime:0.007001s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `tp_users` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `tp_wxuser` [ RunTime:0.005000s ]
+SQL: SELECT `wxname`,`weixin`,`wxid`,`headerpic` FROM `tp_wxuser` WHERE ( `token` = 'vjcbgt1414375209' ) AND ( `uid` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_token_open` [ RunTime:0.003000s ]
+SQL: SELECT `queryname` FROM `tp_token_open` WHERE ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `tp_areply` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `tp_areply` WHERE ( `uid` = 1 ) AND ( `token` = 'vjcbgt1414375209' ) LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.058003s ]
+INFO: [ view_template ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\wxtpxt\Conf\logs\Cache\User\7211be94ef344b0124b2339a8e0ea470.php 第 5 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.068003s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.068003s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.069004s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.069004s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.070004s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-06T16:08:39+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:39+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:39+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:39+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:39+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:39+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
+[ 2016-05-06T16:08:39+08:00 ] ERR: (ThinkException) 无法加载模块:tpl
