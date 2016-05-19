@@ -4,6 +4,7 @@ body,form,input,textarea{margin:0;padding:0;font-size:14px;}
 input{vertical-align:middle;outline:none;}
 textarea{vertical-align:top;outline:none;resize:none;}
 img,button,div{border:0;outline:none;}
+img{display:block}
 .menu_bg{
 	background:url(../images/menu_bg.png) no-repeat;
 	background-size:110px 40px;
@@ -120,4 +121,12 @@ img,button,div{border:0;outline:none;}
 	z-index: 99;
 	background: #000;
 	opacity: 0.5;
+}
+.lp_bg1{
+	background:url(../images/lp_bg_1.png) no-repeat;
+	background-size:100%;
+}
+.lp_bg{
+	background:url(../images/lp_bg_3.png) repeat-y;
+	background-size:100%;
 }

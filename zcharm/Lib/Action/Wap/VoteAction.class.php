@@ -21,7 +21,7 @@ class VoteAction extends BaseAction{
         $this->assign('cover',$cover);
 		//排序条件
 		$orderlimit = array('rank'=>'asc','id'=>'desc');
-        if($this->_get('token') && $this->_get('tid')){
+        if($this->_get('tid')){
             $token      = $this->_get('token');
             $wecha_id   = $this->_get('wecha_id');
             $id         = $this->_get('tid');
@@ -43,9 +43,10 @@ class VoteAction extends BaseAction{
 		$tokenopen = M('Token_open');
 		$admininfo = M('Users');
 		$tokenuid = $tokenopen->where(array('token'=>$token))->getField('uid');
-		$where 		= array('token'=>$token,'id'=>$id);
+		$where 		= array('id'=>$id);
 		$vote 	= $t_vote->where($where)->find();
 		$admininfo = $admininfo->find($tokenuid);
+		
         if(empty($vote)){
             exit('非法操作');
         }
@@ -137,9 +138,17 @@ class VoteAction extends BaseAction{
         $this->assign('vote_item', $vote_item);
         $this->assign('vote',$vote);
 		$this->assign('info',$admininfo);
+		$this->share();
 		$this->display();
 	}
-
+	public function ajaxCheckIsJoined(){
+		$id = $_GET['id'];
+		if(isset($_COOKIE['round_'.$id])){
+			echo 'yes';exit;
+		}else{
+			echo 'no';exit;
+		}
+	}
 	
 	public function player(){
 		$agent = $_SERVER['HTTP_USER_AGENT']; 
@@ -297,11 +306,11 @@ class VoteAction extends BaseAction{
 			$id         = $this->_get('id');
 		$this->assign('token',$token);
         $this->assign('wecha_id',$wecha_id);
-        $this->assign('tid',$tid);
+        $this->assign('id',$tid);
 		$this->assign('mid',$id);
-		
+
 		$t_vote		= M('Vote');
-		$where 		= array('token'=>$token,'id'=>$tid);
+		$where 		= array('id'=>$tid);
 		$vote 	= $t_vote->where($where)->find();
         $vote_item = M('Vote_item');
         $condition['id'] = htmlspecialchars($this->_get('id'));
@@ -327,15 +336,36 @@ class VoteAction extends BaseAction{
 		$this->assign('gzh',$gzh);
         $this->assign('data',$data);
 		$this->assign('vote',$vote);
+		$this->share();
         $this->display();
     }
-
+	public function ajaxToupiao(){
+		$mid = $_GET['mid'];
+		$tid = $_GET['tid'];
+		if(isset($_COOKIE['roundid_'.$tid.'_mid_'.$mid])){
+			$return = array('status'=>'error','msg'=>'每个ID仅有一次投票机会');
+			echo json_encode($return);
+			exit();
+		}
+		$Model = M('Vote_item');
+		$result = $Model->where("id=$mid")->setInc('vcount');
+		if($result){
+			setcookie('roundid_'.$tid.'_mid_'.$mid,'get',time()+36000000);
+			$return = array('status'=>'ok','msg'=>'投票成功');
+			echo json_encode($return);
+			exit();
+		}else{
+			$return = array('status'=>'error','msg'=>'投票失败，请重试');
+			echo json_encode($return);
+			exit();
+		}
+	}
 	public function share(){
         $token      = $this->_get('token');
         $id         = $this->_get('tid');
         $t_vote     = M('Vote');
         $t_record  = M('Vote_record');
-        $where      = array('id'=>$id,'token'=>$token);
+        $where      = array('id'=>$id);
         $vote   = $t_vote->where($where)->find();
 		$user = M('Users');
 		$tokenopen = M('Token_open');
@@ -378,7 +408,7 @@ class VoteAction extends BaseAction{
         $this->assign('vote_item', $vote_item);
         $this->assign('vote',$vote);
 		$this->assign('info',$admininfo);
-        $this->display();
+       // $this->display();
     }
 	
     public function vote(){
