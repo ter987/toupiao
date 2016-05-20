@@ -50,11 +50,11 @@
 		</div>
 	</div>
 	<div class="center-block footer" role="footer">
-		<div class="text-center">
+		<!-- <div class="text-center">
 			<p>
 				<a href="#">微信数字投票【萌娃、摄影、微男/女神评选】</a> &nbsp;源码交流：&nbsp;<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=30940976&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:30940976:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
 			</p>
-		</div>
+		</div> -->
 		<div class="text-center">
 			</div>
 	</div>

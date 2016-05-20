@@ -215,8 +215,8 @@ afterBlur: function(){this.sync();}
                   <td><?php echo (date('Y-m-d',$list["statdate"])); ?></td>
                   <td><?php echo (date('Y-m-d',$list["enddate"])); ?></td>
                   <td> <a href="<?php echo ($myurl); ?>/index.php?g=Wap&m=Vote&a=index&token=<?php echo $_SESSION['token']; ?>&tid=<?php echo ($list["id"]); ?>" target="_blank">活动首页<?php if($list['type'] == 'text'): ?>文字投票<?php else: ?>图片投票<?php endif; echo ($list["id"]); ?></a> 
-				|   <a href="<?php echo ($myurl); ?>/index.php?g=User&m=Bm&a=index&token=<?php echo $_SESSION['token']; ?>&tid=<?php echo ($list["id"]); ?>" target="_blank">PC报名地址</a>
-				|     <a href="<?php echo ($myurl); ?>/index.php?g=User&m=Bm&a=wap&token=<?php echo $_SESSION['token']; ?>&tid=<?php echo ($list["id"]); ?>" target="_blank">WAP报名地址</a>
+				|   <!-- <a href="<?php echo ($myurl); ?>/index.php?g=User&m=Bm&a=index&token=<?php echo $_SESSION['token']; ?>&tid=<?php echo ($list["id"]); ?>" target="_blank">PC报名地址</a>
+				|     <a href="<?php echo ($myurl); ?>/index.php?g=User&m=Bm&a=wap&token=<?php echo $_SESSION['token']; ?>&tid=<?php echo ($list["id"]); ?>" target="_blank">WAP报名地址</a> -->
 				  </td>
                    <td class="norightborder">
 				   <a href="<?php echo U('Vote/edit',array('type'=>$list['type'],'id'=>$list['id']));?>"  class="btn btn-primary btn_submit  J_ajax_submit_btn">投票设置</a>

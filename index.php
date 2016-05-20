@@ -1,9 +1,9 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
 date_default_timezone_set('PRC');
-ini_set("display_errors", 0);
+ini_set("display_errors", 1);
 error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
-//error_reporting(E_ALL);
+error_reporting(E_ALL);
 
 
 //修正部份计算机 DOCUMENT_ROOT 无值的问题

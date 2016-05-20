@@ -61,6 +61,17 @@
 					</div>
 				</div>
 			</div>
+			<div class="row" style="margin:10px 0px;">
+					<div class="menu_bg">
+						凤之舞<span class="small">简介</span>
+					</div>
+					<div style="clear:both;"></div>
+					<div style="margin:10px 0px;font-size:12px;">
+						  <?php 
+	echo html_entity_decode(htmlspecialchars_decode($vote['qtxinxi']))
+	?>
+					</div>
+				</div>
 			<input type="hidden" id="mid" value="<?php echo $mid ?>" />
 			<script>
 				$('#toupiao').click(function(){

@@ -28,7 +28,15 @@
 			<div class="container" style="padding:0px;">
 			    <img src="./images/top.png" style="width:100%;">
 			</div>
-
+			<div class="row" style="margin:10px 0px;">
+					<div class="menu_bg">
+						凤之舞<span class="small">简介</span>
+					</div>
+					<div style="clear:both;"></div>
+					<div style="margin:10px 0px;font-size:12px;">
+						  <?php  echo html_entity_decode(htmlspecialchars_decode($vote['qtxinxi'])) ?>
+					</div>
+				</div>
 			<div class="container" style="padding:0px;margin-top:10px;">
 				<div class="col-xs-12">
 					<div class="but_sty canyu" style="background:#FF4F00;width:40%;">
@@ -46,50 +54,7 @@
 						本期大礼包
 					</div>
 					<div>
-						<!-- 一排2个 -->
-						<div class="row m0" style="padding:4% 2%">
-							<div class="t_c" style="margin:0 auto;">
-								<div style="width:65%">
-									<div style="width:50%;float:left;">
-										<img src="./images/icon1.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											纪念杯子一个
-										</div>
-									</div>
-									<div style="width:50%;float:left;">
-										<img src="./images/icon2.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											优贝亲子阅读画册一份
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- 一排3个大 -->
-						<div class="row m0" style="padding:4% 2%">
-							<div class="t_c" style="margin:0 auto;">
-								<div style="width:100%">
-									<div style="width:33%;float:left;">
-										<img src="./images/icon3.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											精美旅游帽一顶
-										</div>
-									</div>
-									<div style="width:33%;float:left;">
-										<img src="./images/icon4.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											美鹰汽车免费洗车一次
-										</div>
-									</div>
-									<div style="width:33%;float:left;">
-										<img src="./images/icon5.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											安然纳米免费汗蒸一次
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+
 						
 						<!-- 一排3个 -->
 						<div class="row m0" style="padding:4% 2%">
@@ -134,7 +99,7 @@
 								<div style="width:25%;float:left;">
 									<img src="./images/icon6.jpg" style="border-radius:100px;width:60%">
 									<div class="t_c" style="font-size:1.8vw">
-										大明游泳馆免费体验一次
+										汇康游泳馆免费体验一次
 									</div>
 								</div>
 								<div style="width:25%;float:left;">
@@ -179,9 +144,9 @@
 								<div style="position:absolute;top:10%;left:15%;right:15%;">
 									<img src="./images/lp_min.jpg" style="width:100%">
 									<div  class="col-xs-12" style="padding:0px;margin-top:5px;">
-										<div style="height:14px;line-height:14px;width:100%;overflow:hidden;font-size:12px;">
+										<!-- <div style="height:14px;line-height:14px;width:100%;overflow:hidden;font-size:12px;">
 											¥19880 Wacom新帝移动电脑2代（i7 512GB）+20000元奖
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div style="position:absolute;bottom:10%;left:5%;right:5%;color:#FF4F00;font-size:10px;">
@@ -266,15 +231,7 @@
 						<div style="width:17%;float:left;">&nbsp;</div>							
 					</div>
 				</div>		
-				<div class="row" style="margin:10px 0px;">
-					<div class="menu_bg">
-						风之舞<span class="small">简介</span>
-					</div>
-					<div style="clear:both;"></div>
-					<div style="margin:10px 0px;font-size:12px;">
-						  <?php  echo html_entity_decode(htmlspecialchars_decode($vote['qtxinxi'])) ?>
-					</div>
-				</div>
+				
 				<div class="container" style="padding:0px;">
 					<div class="menu_bg">
 						领奖<span class="small">地址</span>

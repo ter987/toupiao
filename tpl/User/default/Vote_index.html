@@ -64,8 +64,8 @@
                   <td>{31cms:$list.statdate|date='Y-m-d',###}</td>
                   <td>{31cms:$list.enddate|date='Y-m-d',###}</td>
                   <td> <a href="{31cms:$myurl}/index.php?g=Wap&m=Vote&a=index&token=<php>echo $_SESSION['token'];</php>&tid={31cms:$list.id}" target="_blank">活动首页<if condition="$list['type'] eq 'text'">文字投票<else/>图片投票</if>{31cms:$list.id}</a> 
-				|   <a href="{31cms:$myurl}/index.php?g=User&m=Bm&a=index&token=<php>echo $_SESSION['token'];</php>&tid={31cms:$list.id}" target="_blank">PC报名地址</a>
-				|     <a href="{31cms:$myurl}/index.php?g=User&m=Bm&a=wap&token=<php>echo $_SESSION['token'];</php>&tid={31cms:$list.id}" target="_blank">WAP报名地址</a>
+				|   <!-- <a href="{31cms:$myurl}/index.php?g=User&m=Bm&a=index&token=<php>echo $_SESSION['token'];</php>&tid={31cms:$list.id}" target="_blank">PC报名地址</a>
+				|     <a href="{31cms:$myurl}/index.php?g=User&m=Bm&a=wap&token=<php>echo $_SESSION['token'];</php>&tid={31cms:$list.id}" target="_blank">WAP报名地址</a> -->
 				  </td>
                    <td class="norightborder">
 				   <a href="{31cms::U('Vote/edit',array('type'=>$list['type'],'id'=>$list['id']))}"  class="btn btn-primary btn_submit  J_ajax_submit_btn">投票设置</a>

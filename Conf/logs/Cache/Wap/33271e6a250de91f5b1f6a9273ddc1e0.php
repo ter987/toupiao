@@ -12,15 +12,15 @@
    <link href="<?php echo STATICS;?>/vote/index/style.css" rel="stylesheet"  media="all">
 <script type="text/javascript">
     // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
-    // var useragent = navigator.userAgent;
-    // if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
-        // // 这里警告框会阻塞当前页面继续加载
-        // alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
-        // // 以下代码是用javascript强行关闭当前页面
-        // var opened = window.open('about:blank', '_self');
-        // opened.opener = null;
-        // opened.close();
-    // }
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
 </script>
 </head>
 <body>
@@ -61,6 +61,15 @@
 					</div>
 				</div>
 			</div>
+			<div class="row" style="margin:10px 0px;">
+					<div class="menu_bg">
+						风之舞<span class="small">简介</span>
+					</div>
+					<div style="clear:both;"></div>
+					<div style="margin:10px 0px;font-size:12px;">
+						  <?php  echo html_entity_decode(htmlspecialchars_decode($vote['qtxinxi'])) ?>
+					</div>
+				</div>
 			<input type="hidden" id="mid" value="<?php echo $mid ?>" />
 			<script>
 				$('#toupiao').click(function(){
@@ -92,50 +101,7 @@
 						本期大礼包
 					</div>
 					<div>
-						<!-- 一排2个 -->
-						<div class="row m0" style="padding:4% 2%">
-							<div class="t_c" style="margin:0 auto;">
-								<div style="width:65%">
-									<div style="width:50%;float:left;">
-										<img src="./images/icon1.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											纪念杯子一个
-										</div>
-									</div>
-									<div style="width:50%;float:left;">
-										<img src="./images/icon2.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											优贝亲子阅读画册一份
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- 一排3个大 -->
-						<div class="row m0" style="padding:4% 2%">
-							<div class="t_c" style="margin:0 auto;">
-								<div style="width:100%">
-									<div style="width:33%;float:left;">
-										<img src="./images/icon3.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											精美旅游帽一顶
-										</div>
-									</div>
-									<div style="width:33%;float:left;">
-										<img src="./images/icon4.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											美鹰汽车免费洗车一次
-										</div>
-									</div>
-									<div style="width:33%;float:left;">
-										<img src="./images/icon5.jpg" style="border-radius:100px;width:60%">
-										<div class="t_c" style="font-size:1.8vw">
-											安然纳米免费汗蒸一次
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+
 						
 						<!-- 一排3个 -->
 						<div class="row m0" style="padding:4% 2%">
@@ -180,7 +146,7 @@
 								<div style="width:25%;float:left;">
 									<img src="./images/icon6.jpg" style="border-radius:100px;width:60%">
 									<div class="t_c" style="font-size:1.8vw">
-										大明游泳馆免费体验一次
+										汇康游泳馆免费体验一次
 									</div>
 								</div>
 								<div style="width:25%;float:left;">
@@ -312,15 +278,7 @@
 						<div style="width:17%;float:left;">&nbsp;</div>							
 					</div>
 				</div>		
-				<div class="row" style="margin:10px 0px;">
-					<div class="menu_bg">
-						风之舞<span class="small">简介</span>
-					</div>
-					<div style="clear:both;"></div>
-					<div style="margin:10px 0px;font-size:12px;">
-						  <?php  echo html_entity_decode(htmlspecialchars_decode($vote['qtxinxi'])) ?>
-					</div>
-				</div>
+				
 				<div class="container" style="padding:0px;">
 					<div class="menu_bg">
 						领奖<span class="small">地址</span>
