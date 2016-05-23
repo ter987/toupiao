@@ -402,6 +402,8 @@ class VoteAction extends BaseAction{
 			$my_rank = array_keys($rank_count,$value['vcount']);
 			$my_rank = intval($my_rank[0]) + 1;
 			$vote_item[$k]['mingci']=$my_rank;
+			$vote_item[$k]['tourl']= substr($value['tourl'],0,8).'***';
+			$vote_item[$k]['item']= mb_substr($value['item'],0,2,'utf-8').'***';
         }
 		$this->assign('page',$show);
         $this->assign('total',$total);
