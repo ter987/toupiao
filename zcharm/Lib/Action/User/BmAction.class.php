@@ -30,7 +30,7 @@ class BmAction extends BaseAction{
 		$tourl      =   $this->_post('tourl');
 		$intro      =   $this->_post('intro');
 		$startpicurl     =   $this->_post('startpicurl');
-		$msg = '您的报名已成功';
+		$msg = '今日签到成功,明日继续加油!';
 		$checkvote = M("Vote_item");
 		$data['vid'] 	= $vid;
 		$data['item'] = $item;
@@ -55,8 +55,8 @@ class BmAction extends BaseAction{
             echo json_encode($arr);
             exit;
 		}
-		if(M("Vote_item")->where("tourl=$tourl")->find()){
-			$arr=array('success'=>0,'msg'=>"该手机号本期已参加");
+		if(M("Vote_item")->where("tourl=$tourl && FROM_UNIXTIME(`addtime`,'%Y-%m-%d')=CURDATE()")->find()){
+			$arr=array('success'=>0,'msg'=>"今天已签到,不能重复签到!");
             echo json_encode($arr);
             exit;
 		}
@@ -67,7 +67,7 @@ class BmAction extends BaseAction{
             exit;
         }
 		else{
-			setcookie('round_'.$vid,'get',time()+360000);
+			setcookie('cishu',$_COOKIE['cishu']+1,time()+3600000);
 			$arr=array('success'=>1,'msg'=> $msg,'id'=>$ok,'tid'=>$vid);
 			echo json_encode($arr);  
 		   exit;

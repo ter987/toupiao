@@ -1,0 +1,53 @@
+<!DOCTYPE HTML><html lang="en-US">
+ <head>
+   <meta charset="UTF-8">
+   <title>{31cms:$vote.title}</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="description" content="{31cms:$vote.title}">
+   <script src="{31cms::STATICS}/vote/wap/jquery.js" type="text/javascript"></script>
+   <script src="{31cms::STATICS}/vote/wap/js/index.js" type="text/javascript"></script>
+   <link href="{31cms::STATICS}/vote/wap/bootstrap.min.css" rel="stylesheet"  media="all">
+   <link href="{31cms::STATICS}/vote/wap/style.css" rel="stylesheet"  media="all">
+<script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
+</script>
+</head>
+<body>
+		<div class="container" style="padding:0px;background:#F6E138;min-height:1000px;">
+			<div class="container" style="padding:0px;">
+			    <img src="./images/top.png" style="width:100%;">
+			</div>
+			<div class="container" style="padding:10px 5%;">
+				<div class="row" style="margin:10px 0px;">
+					<div class="menu_bg1">
+						凤之舞<span class="small">简介</span>
+					</div>
+					<div style="clear:both;"></div>
+					<div style="margin:10px 0px;font-size:12px;">
+						  <?php 
+	echo html_entity_decode(htmlspecialchars_decode($vote['qtxinxi']))
+	?>
+					</div>
+				</div>
+			</div>
+			<div class="container" style="padding:0px;margin-top:10px;">
+				<div class="col-xs-12">
+					<div class="but_sty canyu" style="background:#FF4F00;width:40%;">
+						我要参与
+					</div>
+				</div>
+			</div>
+			<include file="./tpl/Wap/blue/Vote_footer.html" />
+			

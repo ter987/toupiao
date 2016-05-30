@@ -2,12 +2,49 @@
 class VoteAction extends BaseAction{
 
 	public function _initialize() {
+		error_reporting(E_ALL);
 		parent::_initialize();
 		$getpagenumber  = 6;
 		C('site_url','http://'.$_SERVER['HTTP_HOST']);
+		define('AppID', 'wx547476824bf47a83');
+		define('AppSecrt','8f1dbf68f11cf903055a62c58844368e');
 	}
-
+	public function getAccessToken(){
+		$url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".AppID."&secret=".AppSecrt;
+		$data = file_get_contents($url);
+		$data = json_decode($data,true);
+		if($data['access_token']){
+			return $data['access_token'];
+		}else{
+			return false;
+		}
+	}
+	public function weixin(){
+		$access_token = $this->getAccessToken();
+		$this->assign('appId',AppID);
+		$time = time();
+		$this->assign('timestamp',$time);
+		$nonceStr = uniqid();
+		$this->assign('nonceStr',$nonceStr);
+		$url  = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=jsapi";
+		$data = file_get_contents($url);
+		$data = json_decode($data,true);
+		$ticket = $data['ticket'];
+		$uri = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+		$string1 = "jsapi_ticket=".$ticket."&noncestr=".$nonceStr."&timestamp=".$time."&url=".$uri;
+		//echo $string1;exit;
+		$signature = sha1($string1);
+		$this->assign('signature',$signature);
+	}
 	public function index(){
+		if(isset($_COOKIE['cishu'])){
+			$cishu = $_COOKIE['cishu'];
+		}else{
+			$cishu = 0;
+		}
+		$this->assign('cishu',$cishu);
+		$this->weixin();
+		//echo $access_token;
 		$agent = $_SERVER['HTTP_USER_AGENT']; 
 		if(!strpos($agent,"icroMessenger")) {
 			// echo '此功能只能在微信浏览器中使用';exit;
@@ -37,7 +74,7 @@ class VoteAction extends BaseAction{
         $this->assign('token',$token);
         $this->assign('wecha_id',$wecha_id);
         $this->assign('id',$id);
-
+		$this->clicks($id);
 		$t_vote		= M('Vote');
         $t_record  = M('Vote_record');
 		$tokenopen = M('Token_open');
@@ -140,6 +177,38 @@ class VoteAction extends BaseAction{
 		$this->assign('info',$admininfo);
 		$this->share();
 		$this->display();
+	}
+	public function chaxuan(){
+		$tourl = $_GET['tourl'];
+		$Model = M('Vote_item');
+		$result = $Model->where("tourl='".$tourl."'")->find();
+		if($result){
+			$arr=array('success'=>1,'data'=>$result);
+            echo json_encode($arr);
+			
+            exit;
+		}else{
+			$arr=array('success'=>0,'msg'=>'查询不到，请确认手机号码！');
+            echo json_encode($arr);
+			
+            exit;
+		}
+	}
+	public function clicks($id){
+		$Model = M('Vote');
+		$result = $Model->where("id=$id")->find();
+		//var_dump($result);exit;
+		$now = time();
+		$diff = round(($now-$result['do_time'])/86400,1);
+		if($diff>=1){
+			$click = 2001;
+			$Model->where("id=$id")->save(array('do_time'=>$now));
+		}else{
+			$click = 1;
+		}
+		
+		$Model->where("id=$id")->setInc('clicks',$click);
+		
 	}
 	public function ajaxCheckIsJoined(){
 		$id = $_GET['id'];
@@ -308,7 +377,7 @@ class VoteAction extends BaseAction{
         $this->assign('wecha_id',$wecha_id);
         $this->assign('id',$tid);
 		$this->assign('mid',$id);
-
+		$this->clicks($tid);
 		$t_vote		= M('Vote');
 		$where 		= array('id'=>$tid);
 		$vote 	= $t_vote->where($where)->find();
@@ -377,7 +446,7 @@ class VoteAction extends BaseAction{
 		$condition = array('vid' => $id,'status' => 1);
 		import('./iMicms/Lib/ORG/Page.class.php');
         $count = M('Vote_item')->where($condition)->count();
-        $page = new Page($count,60);
+        $page = new Page($count,10000);
         $page->setConfig('theme', '<li><a>%totalRow% %header%</a></li> %upPage%  %linkPage% %downPage% ');
 		//$page->parameter =   "ar=100";
         $show = $page->show();
@@ -395,19 +464,26 @@ class VoteAction extends BaseAction{
 		$rank_count = array_reverse($rank_countno);
 		$item_count = M('Vote_item')->where($condition)->order('vcount desc')->limit($page->firstRow.','.$page->listRows)->select();
 		$rwhere['vcount'] = array('gt',$item_count[0]['vcount']);
+		$k = 1;
         foreach ($item_count as $k=>$value) {
-            $vote_item[$k]['per']=(number_format(($value['vcount'] / $vcount),2))*100;
-            $vote_item[$k]['pro']=$value['vcount'];
-			$vote_item[$k]['prode']=$value['dcount'];
-			$my_rank = array_keys($rank_count,$value['vcount']);
-			$my_rank = intval($my_rank[0]) + 1;
-			$vote_item[$k]['mingci']=$my_rank;
-			$vote_item[$k]['tourl']= substr($value['tourl'],0,8).'***';
-			$vote_item[$k]['item']= mb_substr($value['item'],0,2,'utf-8').'***';
+        	$count = M('Vote_item')->where(array('vid'=>$id,'tourl'=>$value['tourl']))->count();
+			//echo $count;exit;
+			if($count>=4){
+				//var_dump($value);
+	            // $data[$k]['per']=(number_format(($value['vcount'] / $vcount),2))*100;
+	            // $data[$k]['pro']=$value['vcount'];
+				// $data[$k]['prode']=$value['dcount'];
+				// $my_rank = array_keys($rank_count,$value['vcount']);
+				// $my_rank = intval($my_rank[0]) + 1;
+				$data[$k]['mingci']=$k;
+				$data[$k]['tourl']= substr($value['tourl'],0,8).'***';
+				$data[$k]['item']= mb_substr($value['item'],0,2,'utf-8').'***';
+				$k++;
+			}
         }
 		$this->assign('page',$show);
         $this->assign('total',$total);
-        $this->assign('vote_item', $vote_item);
+        $this->assign('vote_item', $data);
         $this->assign('vote',$vote);
 		$this->assign('info',$admininfo);
        // $this->display();
